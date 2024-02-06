@@ -1,6 +1,8 @@
-import 'package:animated_bottom_navigation_bar/animated_bottom_navigation_bar.dart';
+// ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables, prefer_final_fields, unused_import
+
 import 'package:belajar/screens/home_screen.dart';
 import 'package:belajar/screens/input_form.dart';
+import 'package:belajar/screens/latihan_form.dart';
 import 'package:belajar/screens/list_screen.dart';
 import 'package:belajar/screens/second_screen.dart';
 import 'package:belajar/screens/third_screen.dart';
@@ -15,7 +17,12 @@ class NavigationMenu extends StatefulWidget {
 
 class _NavigationMenuState extends State<NavigationMenu> {
   int _selectedTab = 0;
-  var _pages = [HomeScreen(), ListSeaScreen(), BelajarForm()];
+  var _pages = [
+    HomeScreen(),
+    ListSeaScreen(),
+    BelajarForm(),
+    Latihan1Form(),
+  ];
 
   _changeTab(int index) {
     setState(() {
@@ -35,7 +42,9 @@ class _NavigationMenuState extends State<NavigationMenu> {
         items: [
           BottomNavigationBarItem(icon: Icon(Icons.home), label: 'Home'),
           BottomNavigationBarItem(icon: Icon(Icons.search), label: 'Second'),
-          BottomNavigationBarItem(icon: Icon(Icons.person), label: 'Third')
+          BottomNavigationBarItem(icon: Icon(Icons.person), label: 'Third'),
+          BottomNavigationBarItem(
+              icon: Icon(Icons.credit_card), label: 'Fourth'),
         ],
       ),
     );
